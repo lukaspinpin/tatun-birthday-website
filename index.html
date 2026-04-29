@@ -120,6 +120,8 @@ body{background:var(--cream);color:var(--text-dark);font-family:'Cormorant Garam
 .choice-card{background:white;border:1px solid oklch(22% .07 248 / .1);border-radius:2px;padding:16px 20px;flex:1;min-width:200px;max-width:300px;position:relative;cursor:default;transition:box-shadow .25s,border-color .25s}
 .choice-card:hover{box-shadow:0 4px 20px oklch(22% .07 248 / .08);border-color:oklch(22% .07 248 / .2)}
 .choice-card.favorited{border-color:var(--blush);background:oklch(99% .01 15)}
+.choice-card.activity-page-hidden{display:none!important}
+.activity-choice-nav{margin-bottom:10px}
 .choice-icon{font-size:1.2rem;margin-bottom:6px;display:block}
 .choice-name{font-size:1rem;font-weight:500;color:var(--text-dark);margin-bottom:4px}
 .choice-desc{font-size:.82rem;color:var(--text-light);line-height:1.5;font-style:italic}
@@ -408,6 +410,8 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
           <div class="slot-content">
             <div class="choices-label">how to spend the first afternoon</div>
             <p class="proximity-hint">Our base is Villa Kefalomandouko — on a hill just outside Corfu Town (~5 min by car to the centre, ~10 min to the port). Times below are rough one-way trips from the villa.</p>
+            <div class="choices-activity-block" data-activity-group="d1-afternoon">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d1-afternoon"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d1-walk"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏛</span><div class="choice-name">Old Town wander</div><div class="choice-desc">Lose yourself in the Venetian laneways of Kerkyra — past crumbling archways, bougainvillea, and the sound of somewhere old. ~8–12 min scooter · centre.</div></div>
               <div class="choice-card" data-id="d1-beach"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌊</span><div class="choice-name">Old Town Beach</div><div class="choice-desc">Faliraki / NAOK area — a town swim without leaving Kerkyra. ~10–14 min · east side of town.</div></div>
@@ -415,6 +419,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
               <div class="choice-card" data-id="d1-kanoni"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">⛪</span><div class="choice-name">Kanoni &amp; Mouse Island</div><div class="choice-desc">The postcard view — Vlacherna Monastery, Pontikonisi, runway over the water. ~12–15 min · south of town.</div></div>
               <div class="choice-card" data-id="d1-monrepos"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌳</span><div class="choice-name">Mon Repos park</div><div class="choice-desc">Shaded estate walks and a small quiet beach — gentle first dip. ~10–14 min · east of town.</div></div>
               <div class="choice-card" data-id="d1-garitsa"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🚶</span><div class="choice-name">Garitsa Bay</div><div class="choice-desc">Long waterfront promenade — golden hour, sailboats, tavernas. ~8–12 min · south harbour.</div></div>
+            </div>
             </div>
           </div>
         </div>
@@ -444,6 +449,8 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
             <div class="activity-note">After breakfast, we pick up the scooter — then the beach is yours to choose.</div>
             <div class="choices-label">pick your beach</div>
             <p class="proximity-hint">Approx. one-way scooter times from Villa Kefalomandouko (hill near Corfu Town — hotel quotes ~5 min to the centre by car). Traffic and stops add a little.</p>
+            <div class="choices-activity-block" data-activity-group="d2-morning-beach">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d2-morning-beach"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d2-fortress"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏰</span><div class="choice-name">Old Fortress beach</div><div class="choice-desc">Swim inside the Old Fortress walls — stone, history, calm water. ~10–14 min · Corfu Town.</div></div>
               <div class="choice-card" data-id="d2-dassia"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏖</span><div class="choice-name">Dassia</div><div class="choice-desc">Long shallow bay, family-friendly — watersports and tavernas behind the trees. ~15–18 min · northeast coast.</div></div>
@@ -455,6 +462,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
               <div class="choice-card" data-id="d2-paleok"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌿</span><div class="choice-name">Paleokastritsa</div><div class="choice-desc">Six bays, boat trips into the caves, monastery on the hill — the west coast's headline act. ~30–36 min · west.</div></div>
               <div class="choice-card" data-id="d2-halikounas"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🪁</span><div class="choice-name">Halikounas &amp; Issos</div><div class="choice-desc">Endless sand meeting Lake Korission — dunes, kite-surfers, wild open horizon. ~38–45 min · south.</div></div>
             </div>
+            </div>
           </div>
         </div>
         <div class="time-slot">
@@ -462,6 +470,8 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
           <div class="slot-content">
             <div class="choices-label">and for the afternoon</div>
             <p class="proximity-hint">Same beach menu as the morning — pick a second spot or stay put and swim longer.</p>
+            <div class="choices-activity-block" data-activity-group="d2-afternoon-beach">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d2-afternoon-beach"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d2-fortress-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏰</span><div class="choice-name">Old Fortress beach</div><div class="choice-desc">Swim inside the Old Fortress walls — stone, history, calm water. ~10–14 min · Corfu Town.</div></div>
               <div class="choice-card" data-id="d2-dassia-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏖</span><div class="choice-name">Dassia</div><div class="choice-desc">Long shallow bay, family-friendly — watersports and tavernas behind the trees. ~15–18 min · northeast coast.</div></div>
@@ -472,6 +482,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
               <div class="choice-card" data-id="d2-agiosg-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">⛰</span><div class="choice-name">Agios Gordios</div><div class="choice-desc">Dramatic bay framed by cliffs — long beach, tavernas, sunset vibe. ~26–32 min · southwest.</div></div>
               <div class="choice-card" data-id="d2-paleok-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌿</span><div class="choice-name">Paleokastritsa</div><div class="choice-desc">Six bays, boat trips into the caves, monastery on the hill — the west coast's headline act. ~30–36 min · west.</div></div>
               <div class="choice-card" data-id="d2-halikounas-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🪁</span><div class="choice-name">Halikounas &amp; Issos</div><div class="choice-desc">Endless sand meeting Lake Korission — dunes, kite-surfers, wild open horizon. ~38–45 min · south.</div></div>
+            </div>
             </div>
           </div>
         </div>
@@ -508,12 +519,15 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
           <div class="slot-content">
             <div class="choices-label">choose your voyage</div>
             <p class="proximity-hint">Most group cruises leave from Corfu Town port — ~10–15 min scooter from the villa; hotel suggests ~5 min taxi to the port if we're lazy.</p>
+            <div class="choices-activity-block" data-activity-group="d3-allday">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d3-allday"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d3-paxos"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏝</span><div class="choice-name">Paxos &amp; Antipaxos</div><div class="choice-desc">Full-day classic — sea caves, swimming stops, Voutoumi's blue. Boards near the port · ~8 NM south.</div></div>
               <div class="choice-card" data-id="d3-blue"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">💎</span><div class="choice-name">Blue Lagoon cruise</div><div class="choice-desc">Speedboat / rib trips to turquoise pools off the mainland coast — lots of operators; compare times at the port.</div></div>
               <div class="choice-card" data-id="d3-albania"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🇦🇱</span><div class="choice-name">Saranda day trip</div><div class="choice-desc">Ferry from Corfu to Albania — seafront Saranda, optional Butrint ruins (passport required). Full day.</div></div>
               <div class="choice-card" data-id="d3-coastal"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌊</span><div class="choice-name">Northeast coast by boat</div><div class="choice-desc">Cruise the east — Agni, Kalami, hidden bays; sometimes wine stop. Upmarket, slower pace.</div></div>
               <div class="choice-card" data-id="d3-kayak"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🛶</span><div class="choice-name">Sea kayak / snorkel</div><div class="choice-desc">Half-day paddles in sheltered bays — often Mon Repos / Garitsa / east coast. Meet point usually ~10 min from the villa.</div></div>
+            </div>
             </div>
           </div>
         </div>
@@ -550,17 +564,23 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
           <div class="slot-content">
             <div class="choices-label">yoga</div>
             <p class="proximity-hint">Optional start to the day — heart one if you want it on the itinerary.</p>
+            <div class="choices-activity-block" data-activity-group="d4-morning-yoga">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d4-morning-yoga"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d4-yoga-studio"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🧘</span><div class="choice-name">Yoga studio (town)</div><div class="choice-desc">Drop-in or booked class at a Corfu Town studio — mats, props, cool studio air after warm nights. ~10–15 min scooter from Villa Kefalomandouko.</div></div>
               <div class="choice-card" data-id="d4-yoga-garden"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🪷</span><div class="choice-name">Garden yoga with Lukas</div><div class="choice-desc">Slow flow or stretch on the grass under the olives — just us, no packing up to leave. A private lesson at Villa Kefalomandouko, taught by me.</div></div>
             </div>
+            </div>
             <div class="choices-label">for your hands</div>
             <p class="proximity-hint">Craft &amp; food experiences — drive times from Villa Kefalomandouko unless noted.</p>
+            <div class="choices-activity-block" data-activity-group="d4-morning-hands">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d4-morning-hands"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d4-pottery"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏺</span><div class="choice-name">Pottery workshop</div><div class="choice-desc">Hand-building &amp; glazing at a local studio — leave with your own piece. Venues vary; often ~15–25 min from town.</div></div>
               <div class="choice-card" data-id="d4-olive"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🫒</span><div class="choice-name">Governor olive mill</div><div class="choice-desc">Award-winning Governor estate — groves, tasting, deep dive into Corfiot liquid gold. ~25–30 min · east coast hills.</div></div>
               <div class="choice-card" data-id="d4-cooking"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">👩‍🍳</span><div class="choice-name">Greek cooking class</div><div class="choice-desc">Market shop then cook — pastitsada, tzatziki, island wine. Classes usually central Corfu · ~10–18 min.</div></div>
               <div class="choice-card" data-id="d4-panto"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">⛰</span><div class="choice-name">Mt Pantokrator</div><div class="choice-desc">Highest peak — monastery café, 360° views over Albania &amp; the Ionian. Drive most of the way · ~45–55 min to summit area.</div></div>
+            </div>
             </div>
           </div>
         </div>
@@ -569,11 +589,14 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
           <div class="slot-content">
             <div class="choices-label">on the scooter</div>
             <p class="proximity-hint">Afternoon loops — all times one-way from the villa.</p>
+            <div class="choices-activity-block" data-activity-group="d4-afternoon">
+            <div class="rest-paginator activity-choice-nav" id="activity-nav-d4-afternoon"></div>
             <div class="choices-row">
               <div class="choice-card" data-id="d4-pelekas"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🛵</span><div class="choice-name">Pelekas village</div><div class="choice-desc">Hilltop cafés, Witch House ceramics, beaches below (incl. Kontogialos). ~22–28 min · west.</div></div>
               <div class="choice-card" data-id="d4-lakones"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">📷</span><div class="choice-name">Lakones &amp; Bella Vista</div><div class="choice-desc">Cliff village above Paleokastritsa — famous lookout over the bays. ~30–36 min · west.</div></div>
               <div class="choice-card" data-id="d4-achillion"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌺</span><div class="choice-name">Achilleion Palace</div><div class="choice-desc">Sisi's palace — statues, terraces, gardens tumbling down the hill. ~25–30 min · east of Corfu Town.</div></div>
               <div class="choice-card" data-id="d4-korission"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🦩</span><div class="choice-name">Korission Lagoon</div><div class="choice-desc">Nature reserve — flamingos, dunes, Issos beach at the sea. ~38–45 min · south.</div></div>
+            </div>
             </div>
           </div>
         </div>
@@ -891,6 +914,47 @@ document.querySelectorAll('.choice-card').forEach(function(card){
   if(loadF().indexOf(id)>-1){btn.classList.add('active');card.classList.add('favorited');}
   btn.addEventListener('click',function(){toggleFav(id,btn);});
 });
+
+var ACTIVITY_CHOICE_PAGE_SIZE=3;
+var activityChoicePage={};
+function renderActivityChoiceNav(groupKey){
+  var block=document.querySelector('[data-activity-group="'+groupKey+'"]');
+  if(!block)return;
+  var row=block.querySelector('.choices-row');
+  var nav=block.querySelector('.activity-choice-nav');
+  if(!row||!nav)return;
+  var cards=row.querySelectorAll('.choice-card');
+  var n=cards.length, pp=ACTIVITY_CHOICE_PAGE_SIZE;
+  if(n<=pp){
+    nav.innerHTML='';
+    cards.forEach(function(c){c.classList.remove('activity-page-hidden');});
+    return;
+  }
+  var tp=Math.ceil(n/pp);
+  var pg=activityChoicePage[groupKey]||0;
+  if(pg>=tp)pg=tp-1;
+  if(pg<0)pg=0;
+  activityChoicePage[groupKey]=pg;
+  var start=pg*pp;
+  cards.forEach(function(card,i){
+    card.classList.toggle('activity-page-hidden',i<start||i>=start+pp);
+  });
+  nav.innerHTML='<button type="button" class="rest-page-btn activity-choice-prev"'+(pg===0?' disabled':'')+'>\u2190 prev</button>'
+    +'<span class="rest-page-info">'+(start+1)+'\u2013'+Math.min(start+pp,n)+' of '+n+'</span>'
+    +'<button type="button" class="rest-page-btn activity-choice-next"'+(pg>=tp-1?' disabled':'')+'>next \u2192</button>';
+  var prevBtn=nav.querySelector('.activity-choice-prev');
+  var nextBtn=nav.querySelector('.activity-choice-next');
+  if(prevBtn)prevBtn.onclick=function(){if((activityChoicePage[groupKey]||0)>0){activityChoicePage[groupKey]--;renderActivityChoiceNav(groupKey);}};
+  if(nextBtn)nextBtn.onclick=function(){if((activityChoicePage[groupKey]||0)<tp-1){activityChoicePage[groupKey]++;renderActivityChoiceNav(groupKey);}};
+}
+function initActivityChoicePagination(){
+  document.querySelectorAll('[data-activity-group]').forEach(function(block){
+    var key=block.getAttribute('data-activity-group');
+    if(activityChoicePage[key]===undefined)activityChoicePage[key]=0;
+    renderActivityChoiceNav(key);
+  });
+}
+initActivityChoicePagination();
 
 // ── SCROLL REVEAL ──
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
