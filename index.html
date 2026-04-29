@@ -393,7 +393,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
     <div class="day-block" data-day="1">
       <div class="day-header">
         <div class="day-number">01</div>
-        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Arrival</span></h3><div class="day-date">Sunday, August 17th</div></div>
+        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Arrival</span></h3><div class="day-date">Monday, August 17th</div></div>
         <div class="day-vibe">early morning travel, evening by the water</div>
       </div>
       <div class="time-slots">
@@ -428,7 +428,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
     <div class="day-block" data-day="2">
       <div class="day-header">
         <div class="day-number">02</div>
-        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Beach Day</span></h3><div class="day-date">Monday, August 18th</div></div>
+        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Beach Day</span></h3><div class="day-date">Tuesday, August 18th</div></div>
         <div class="day-vibe">sun, salt, nothing to do but be warm</div>
       </div>
       <div class="time-slots">
@@ -445,7 +445,14 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
         </div>
         <div class="time-slot">
           <div class="slot-time">afternoon</div>
-          <div class="slot-content"><div class="activity-note">Swim. Dry off on warm stone. Read something. Swim again. The afternoon is yours — no itinerary needed.</div></div>
+          <div class="slot-content">
+            <div class="choices-label">and for the afternoon</div>
+            <div class="choices-row">
+              <div class="choice-card" data-id="d2-glyfada-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🛵</span><div class="choice-name">Glyfada Beach</div><div class="choice-desc">A 20-min scooter ride west — one of the island's finest. Beach bars, turquoise water, dramatic cliffs.</div></div>
+              <div class="choice-card" data-id="d2-paleok-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🌿</span><div class="choice-name">Paleokastritsa</div><div class="choice-desc">The west coast's most dramatic setting. Towering cliffs, sea caves, crystal-clear bays. Worth every minute on the scooter.</div></div>
+              <div class="choice-card" data-id="d2-fortress-pm"><button class="heart-btn"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12.5S1 8.5 1 4.5A3.5 3.5 0 0 1 8 2.5 3.5 3.5 0 0 1 15 4.5C15 8.5 8 12.5 8 12.5Z"/></svg></button><span class="choice-icon">🏰</span><div class="choice-name">Old Fortress beach</div><div class="choice-desc">A hidden cove inside the Old Fortress — one of the only places to swim in Corfu Town itself. Quiet, beautiful.</div></div>
+            </div>
+          </div>
         </div>
         <div class="time-slot">
           <div class="slot-time">dinner</div>
@@ -471,7 +478,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
     <div class="day-block" data-day="3">
       <div class="day-header">
         <div class="day-number">03</div>
-        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Boat Trip</span></h3><div class="day-date">Tuesday, August 19th</div></div>
+        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Boat Trip</span></h3><div class="day-date">Wednesday, August 19th</div></div>
         <div class="day-vibe">out on the Ionian, chasing blue lagoons</div>
       </div>
       <div class="time-slots">
@@ -510,7 +517,7 @@ footer{background:var(--navy);padding:40px 24px;text-align:center;color:oklch(50
     <div class="day-block" data-day="4">
       <div class="day-header">
         <div class="day-number">04</div>
-        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Make Something</span></h3><div class="day-date">Wednesday, August 20th</div></div>
+        <div class="day-info"><h3 class="day-name"><span class="day-stroke">Make Something</span></h3><div class="day-date">Thursday, August 20th</div></div>
         <div class="day-vibe">hands in clay, roads through olive groves, one last dinner</div>
       </div>
       <div class="time-slots">
@@ -630,7 +637,7 @@ var BARS=[
 
 var TIER_LABEL={casual:'local',special:'special',fine:'fine dining'};
 var DAY_NAMES={1:'Day 1',2:'Day 2',3:'Day 3',4:'Day 4'};
-var DAY_DATES={1:'Sunday, Aug 17',2:'Monday, Aug 18',3:'Tuesday, Aug 19',4:'Wednesday, Aug 20'};
+var DAY_DATES={1:'Monday, Aug 17',2:'Tuesday, Aug 18',3:'Wednesday, Aug 19',4:'Thursday, Aug 20'};
 var DAY_THEMES={1:'Arrival',2:'Beach Day',3:'Boat Trip',4:'Make Something'};
 var REST_KEY='tatun_restaurants_v2', BAR_KEY='tatun_bars_v1', FAV_KEY='tatun_corfu_favorites';
 var restPage={1:0,2:0,3:0,4:0}, barPage={2:0,3:0};
@@ -734,9 +741,12 @@ var ACTIVITY_MAP={
   'd1-walk':     {day:1,slot:'afternoon',name:'Old Town wander',             icon:'🏛'},
   'd1-beach':    {day:1,slot:'afternoon',name:'Old Town Beach',               icon:'🌊'},
   'd1-rest':     {day:1,slot:'afternoon',name:'Rest & coffee on the Liston',  icon:'☕'},
-  'd2-glyfada':  {day:2,slot:'morning',  name:'Glyfada Beach',                icon:'🛵'},
-  'd2-paleok':   {day:2,slot:'morning',  name:'Paleokastritsa',               icon:'🌿'},
-  'd2-fortress': {day:2,slot:'morning',  name:'Old Fortress beach',           icon:'🏰'},
+  'd2-glyfada':    {day:2,slot:'morning',  name:'Glyfada Beach',              icon:'🛵'},
+  'd2-paleok':     {day:2,slot:'morning',  name:'Paleokastritsa',             icon:'🌿'},
+  'd2-fortress':   {day:2,slot:'morning',  name:'Old Fortress beach',         icon:'🏰'},
+  'd2-glyfada-pm': {day:2,slot:'afternoon',name:'Glyfada Beach',              icon:'🛵'},
+  'd2-paleok-pm':  {day:2,slot:'afternoon',name:'Paleokastritsa',             icon:'🌿'},
+  'd2-fortress-pm':{day:2,slot:'afternoon',name:'Old Fortress beach',         icon:'🏰'},
   'd3-paxos':    {day:3,slot:'all day',  name:'Paxos & Antipaxos cruise',     icon:'🏝'},
   'd3-private':  {day:3,slot:'all day',  name:'Private sailboat cruise',      icon:'⚓'},
   'd3-coastal':  {day:3,slot:'all day',  name:'Northeast coast by boat',      icon:'🌊'},
