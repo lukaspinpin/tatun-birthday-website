@@ -54,7 +54,8 @@ body{background:var(--cream);color:var(--text-dark);font-family:'Cormorant Garam
 .cd-sep{font-size:clamp(2rem,5vw,3rem);font-weight:300;color:oklch(40% .05 240);line-height:1;padding-top:4px;font-style:italic}
 .cd-sub{font-family:'Dancing Script',cursive;font-size:.9rem;color:oklch(55% .05 230);text-align:center;margin-top:8px}
 
-.scroll-cue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:oklch(70% .04 220);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;animation:bob 2s ease-in-out infinite}
+.scroll-cue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:oklch(70% .04 220);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;animation:bob 2s ease-in-out infinite;pointer-events:none}
+.scroll-cue.hidden{opacity:0;transform:translateX(-50%) translateY(12px);animation:none}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
 
 /* ── JOURNEY ── */
@@ -955,6 +956,16 @@ function initActivityChoicePagination(){
   });
 }
 initActivityChoicePagination();
+
+// ── SCROLL CUE ──
+(function(){
+  var cue=document.querySelector('.scroll-cue');
+  if(!cue) return;
+  function hide(){ cue.classList.add('hidden'); window.removeEventListener('scroll',onScroll,{passive:true}); }
+  function onScroll(){ if(window.scrollY>8) hide(); }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  setTimeout(hide, 6000);
+})();
 
 // ── SCROLL REVEAL ──
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1});
